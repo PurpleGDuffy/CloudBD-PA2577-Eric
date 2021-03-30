@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vagrant-test-cloud",
+  "private_key_id": "60798c0b3f699e0eb0a2420f431b2886621b2097",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCSJvtnsObXEm4V\nqrnnHJEvor7Dz6PxRHHGlxxzL6Nn7otkxmKaPa4Lw7V2mu1zxQKOG6Z3xT/tKPxl\n3wsmPP53snQfQpNzIkdKHyndG0WKH/mrNIqON0YcFSHPN7VR+DD5vcuDGRKIESIz\nC9RPpqLAMZShbLk0kiC7sHN+bw+9EGjlp0EcSsKcyPqbLDIt6tvv3PXn9O784yVY\naCzM4s8HWzsucqkADuhPHKbkeH+u8dss3olFOnN/ccEU4AtiUFV82bjYlF/VbT2p\nDbkufqAjT4T2fEfdwCDUVodnea2fikz3YelcJLQSsdDm+kJEoE9mu1QttQdKfxm5\nH2AoTtavAgMBAAECggEAN3Nk1U2P96+9ZqkUyXPUPe+QUziXqfVe+Yrht24uoEMo\nTf7a8ExQmZQSaEKVruPjeUlSWoTTIUb4pCoAz+w6W+2wEyAuU3OA+sViG8q6EpLZ\nJjTUEOs1xXfbEQTA3a293zM8YKwFlOxzPkzRq7q8axEkpC5dAm4izzM+To0SupdJ\nfbegtthmm/1pARrIs88C6alaGSw+3hCt6MJGdAHGwq9jbLTjmwNkRQGtvVXBYsvt\n0zC7m2DabOJy0ok7q5ibMj5WMiw+q9AFZg+/4cwT6wgk3lVqAA/9idBxWZjz8DOd\no74b+SYYaCEo7AUJt5TY2CCD2ZD82wTVugW81KzeWQKBgQDCQFu0U1wwy2oRBJKE\nHpz0EU96T1rt9K/NBc2wtJhwXSKgQeq6MabZoWZN46lv9AmfP3WRWKRcMpfPYVCZ\n/KKUoGif+5hDlSHThWu0ILhAfwbBNv56sIz+pPqpUwYvBs44YpiKe6xDhg15Fldj\nE7pD5runxh3zZFd0HiF0KzTHnQKBgQDAnHMxn3CBcZ8bBb5S7Wdj5LowUdDZJ2vm\nI9bGCPKczey5ujaS5gOpfUWk9sP52KXcvk1LxTYQ5idxLn/dFKECchKO9XFOhiH+\nRXkVxKqRcL5sekVt/SZ5XB0vrAz5yslCqRzZqNJyxVrFKaReDqjyS/DEAvkTwTzw\n2N0XNzPzuwKBgQCIyRMKbyza+1JsO2EFAh2ZzFrAEQNBzuzAnZaTGQjDDwJkASbO\nCEqqs3m73VWiDSF9bw1V1Sqf9cxq7ub4GCtQJ4ilJ2C4LlrMfQYzqFq2p/xUsGoQ\ncSRH6FrOQzV2hf9POzaZRa8vOUVhf/b3QJwIVoDMCrlqe70Nem4qRIZ9DQKBgFD6\n9ius3z5tKPnRhl2TVt7W8bkTDP3f5yuRceE9LdPjeF31/q/waSW/d6KN5YOMJOAU\nWqc6uSqNuZOKe1PWMoO2tjrI0uSy3GPtjaUrVJNllYpCNiKyRpTLt7GtYp87NTcD\npw+UPTbn5uvyQBsTitCkQQwIO/SkUBzq8LmsCfm1AoGABg4FmJ1PZRSYl9v3EbEr\nUBk+q0quZUAuPCukEB+sleOwJ7p/ncykYr/vPLzKduSN8OJc44Rtc93XIHWkcL3g\nF28hOFEXuCMo4mnF5knd7ycASkR/NNk/A+KkKE5ZFqS+w2hxn+sdP4PC38Xqx08S\nKa1PhOxShqalZ2DY+/3QJyE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "vagrant@vagrant-test-cloud.iam.gserviceaccount.com",
+  "client_id": "118341713729573381610",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vagrant%40vagrant-test-cloud.iam.gserviceaccount.com"
+}
