@@ -1,0 +1,151 @@
+en:
+  vagrant_google:
+    already_created: |-
+      The machine is already created.
+    already_status: |-
+      The machine is already in %{status} status.
+    instance_group_create: |-
+      Instance group doesn't exist, trying to create...
+    instance_group_add: |-
+      Adding machine to the instance group...
+    launching_instance: |-
+      Launching an instance with the following settings...
+    not_created: |-
+      Instance is not created. Please run `vagrant up` first.
+    ready: |-
+      Machine is booted and ready for use!
+    ready_comm: |-
+      Machine is ready for Communicator access!
+    rsync_not_found_warning: |-
+      Warning! Folder sync disabled because the rsync binary is missing.
+      Make sure rsync is installed and the binary can be found in the PATH.
+    rsync_folder: |-
+      Rsyncing folder: %{hostpath} => %{guestpath}
+    starting: |-
+      Starting the instance...
+    stopping: |-
+      Stopping the instance...
+    terminating: |-
+      Terminating the instance...
+    waiting_for_operation: |-
+      Waiting for GCP operation '%{name}' to finish...
+    waiting_for_ready: |-
+      Waiting for instance to become "ready"...
+    waiting_for_comm: |-
+      Waiting for Communicator to become available...
+    warn_networks: |-
+      Warning! The Google provider doesn't support any of the Vagrant
+      high-level network configurations (`config.vm.network`). They
+      will be silently ignored.
+    warn_ssh_vagrant_user: |-
+      Warning! SSH credentials are not set (`ssh.username`, `ssh.private_key`).
+      Unless Vagrant's default insecure private key is added to GCE metadata,
+      "vagrant up" will timeout while trying to estabilish an ssh connection
+      to the instance.
+      NOTE! Adding Vagrant private key to GCE metadata is heavily discouraged,
+      since it potentially allows anyone to connect to your instances,
+      including those not managed by Vagrant.
+    will_not_destroy: |-
+      The instance '%{name}' will not be destroyed, since the confirmation
+      was declined.
+#-------------------------------------------------------------------------------
+# Translations for config validation errors
+#-------------------------------------------------------------------------------
+    config:
+      private_key_missing: |-
+        Private key for Google could not be found in the specified location.
+      zone_required: |-
+        A zone must be specified via "zone" option.
+      name_required: |-
+        An instance name must be specified via "name" option.
+      image_required: |-
+        An image must be specified via "image" or "image_family" option.
+      google_project_id_required: |-
+        A Google Cloud Project ID is required via "google_project_id".
+      auto_restart_invalid_on_preemptible: |-
+        "auto_restart" option must be set to "false" for preemptible instances.
+      on_host_maintenance_invalid_on_preemptible: |-
+        "on_host_maintenance" option must be set to "TERMINATE" for preemptible
+        instances.
+      image_and_image_family_set: |-
+        "image" must be unset when setting "image_family"
+      service_accounts_deprecaated: |-
+        "service_accounts is deprecated. Please use scopes instead"
+      on_host_maintenance_invalid_with_accelerators: |-
+        "on_host_maintenance" option must be set to "TERMINATE" for instances
+        with accelerators
+#-------------------------------------------------------------------------------
+# Translations for exception classes
+#-------------------------------------------------------------------------------
+    errors:
+      fog_error: |-
+        There was an error talking to Google. The error message is shown
+        below:
+
+        %{message}
+      instance_ready_timeout: |-
+        The instance never became "ready" in Google. The timeout currently
+        set waiting for the instance to become ready is %{timeout} seconds.
+        Please verify that the machine properly boots. If you need more time
+        set the `instance_ready_timeout` configuration on the Google provider.
+      rsync_error: |-
+        There was an error when attemping to rsync a share folder.
+        Please inspect the error message below for more info.
+
+        Host path: %{hostpath}
+        Guest path: %{guestpath}
+        Error: %{stderr}
+      external_ip_error: |-
+        Specified external IP address is already in use.
+        IP address requested: %{externalip}
+      external_ip_does_not_exist_error: |-
+        Specified external IP address is invalid or does not exist.
+        IP address requested: %{externalip}
+      disk_type_error: |-
+        Specified disk type is not available in the region selected.
+        Disk type requested: %{disktype}
+#-------------------------------------------------------------------------------
+# Translations for machine states
+#-------------------------------------------------------------------------------
+    states:
+      short_not_created: |-
+        not created
+      long_not_created: |-
+        The Google instance is not created. Run `vagrant up` to create it.
+
+      short_PROVISIONING: |-
+        provsioning
+      long_PROVISIONING: |-
+        Resources are being reserved for this instance.  This instance is
+        not yet running.
+
+      short_STAGING: |-
+        staging
+      long_STAGING: |-
+        Resources have been acquired and the instance is being prepared for
+        launch and should be in the RUNNING state soon.
+
+      short_STOPPING: |-
+        stopping
+      long_STOPPING: |-
+        The GCE instance is stopping. Wait until is completely stopped to
+        run `vagrant up` and start it.
+
+      short_RUNNING: |-
+        running
+      long_RUNNING: |-
+        The Google instance is running. To stop this machine, you can run
+        `vagrant halt`. To destroy the machine, you can run `vagrant destroy`.
+
+      short_STOPPED: |-
+        stopped
+      long_STOPPED: |-
+        The Google instance is not currently running, either due to a failure
+        , or the instance is being shut down.  This is a temporary status;
+        the instance will move to either PROVISIONING or TERMINATED.
+
+      short_TERMINATED: |-
+        terminated
+      long_TERMINATED: |-
+        The Google instance was halted or failed for some reason. You can
+        attempt to restart the instance by running `vagrant up`.

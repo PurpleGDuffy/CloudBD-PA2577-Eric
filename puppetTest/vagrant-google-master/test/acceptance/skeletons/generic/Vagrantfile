@@ -1,0 +1,17 @@
+# This is a generic acceptance skeleton with no particular settings, set in
+# europe-west1-d zone
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "basic"
+
+  config.vm.provider :google do |google|
+
+    google.zone = "australia-southeast1-b"
+
+    google.zone_config "australia-southeast1-b" do |zone|
+      zone.name = "vagrant-acceptance-generic-#{('a'..'z').to_a.sample(8).join}"
+      zone.image_family = "debian-9"
+      zone.disk_type = "pd-ssd"
+    end
+  end
+end
