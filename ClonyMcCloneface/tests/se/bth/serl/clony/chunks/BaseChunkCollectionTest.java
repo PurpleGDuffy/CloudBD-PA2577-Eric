@@ -61,10 +61,10 @@ public class BaseChunkCollectionTest {
 		BaseChunkCollection bcc = sp.populateChunkCollection();
 		assertFalse(bcc.isEmpty());
 		SortedSet<Clone> clones = bcc.getClones();
-		assertEquals(1, clones.size());
+		assertEquals(7, clones.size());
 		clones.stream().forEach(e -> assertTrue(e.isConsistent()));
 		Clone c = clones.first();
-		assertEquals(7, c.size()); 
+		assertEquals(1, c.size()); 
 		assertEquals(2, c.instances());
 		
 		sp = new SourceProcessor(new File("data").toPath(), 5, new ListChunkCollection());

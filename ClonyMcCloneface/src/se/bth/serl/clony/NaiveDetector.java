@@ -34,15 +34,18 @@ public class NaiveDetector extends DetectorBase {
 	
 	
 	
+	
 	public NaiveDetector(Path rootFolder, int chunkSize) {
 		super(rootFolder, chunkSize);
 		sp = new SourceProcessor(rootFolder, chunkSize, new ListChunkCollection());
 	}
 	
 	public static void main(String[] args) {
-		Path rootFolder = new File("C:/Users/Eric/ClonyMcCloneface/data/A.java").toPath();
-		//Path rootFolder = new File(args[0]).toPath();
+		Path rootFolder = new File(args[0]).toPath();
 		int chunksize = Integer.parseInt(args[1]);
+		
+		//Path rootFolder = new File("C:/Users/Eric/ClonyMcCloneface/data/A.java").toPath();
+		//int chunksize = Integer.parseInt(args[1]);
 		
 		long start = System.currentTimeMillis();
 		NaiveDetector d = new NaiveDetector(rootFolder, chunksize);
@@ -50,11 +53,12 @@ public class NaiveDetector extends DetectorBase {
 		d.saveResults();
 		System.out.println("Runtime (s): " + (System.currentTimeMillis() - start) / 1000);
 		
+		//Eget
 		//Chunk testChunk = new Chunk("1", "abc", 1, 6);
-		Chunk testChunk = new Chunk("1823641283421", "182", 0, 5);
-		BaseChunkCollection test1 = new ListChunkCollection();
-		test1.addChunk(testChunk);
+		//Chunk testChunk = new Chunk("1823641283421", "182", 0, 5);
+		//BaseChunkCollection test1 = new ListChunkCollection();
+		//test1.addChunk(testChunk);
 		
-		new SourceProcessor(rootFolder, chunksize, test1).populateChunkCollection();
+		//new SourceProcessor(rootFolder, chunksize, test1).populateChunkCollection();
 	}
 }

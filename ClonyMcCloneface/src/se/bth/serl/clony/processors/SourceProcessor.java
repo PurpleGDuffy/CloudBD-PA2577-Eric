@@ -23,6 +23,7 @@
 package se.bth.serl.clony.processors;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -71,29 +72,26 @@ public class SourceProcessor {
 				List<SourceLine> sourceLines = sr.getOnlySourceWithContent();
 				int numLines = sourceLines.size();
 				
-				
-				Iterator<SourceLine> testSource = sourceLines.iterator();
-				
-				
-				while(testSource.hasNext()) {
-					System.out.println(testSource.next());
-				}
-				//chunkCollection.addChunk(c);
-				
-				//sourceLines.
-				//chunkCollection.addChunk(null);
-				 //chunkCollection.getChunks();
-				 //chunkCollection.
-				 for (int i=0; i< numLines; i++) {
-					 for(int j= 0; j < DEFAULT_CHUNKSIZE; j++) {
-						 chunkCollection.addChunk(null);
-						// chunkCollection.getChunks().add(j, element);
-					 }
-						
-					}
-				
 				// TODO iterate over the sourceLines, create chunks and add them to the chunkCollection
 					
+				for(int i = 0; i < numLines - chunkSize + 1; i++) {
+					int startOffset = i;
+					int endOffset = (i + chunkSize) < numLines ? i + chunkSize : numLines;
+
+					List<String> chunkData = new ArrayList<>();
+					
+					StringBuilder sb = new StringBuilder();
+					chunkData.forEach( (n) -> {
+					sb.append(n);
+					});
+					
+
+					Chunk c = new Chunk(p != null ? p.toString() : "unknown", sb.toString(), sourceLines.get(startOffset).getLineNumber(), sourceLines.get(endOffset - 1).getLineNumber());
+
+					c.setIndex(i);
+					chunkCollection.addChunk(c);
+					}			
+				
 				totalLinesProcessed += sourceLines.size();
 				currentFilesProcessed++;
 				
